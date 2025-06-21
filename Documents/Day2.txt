@@ -1,0 +1,1732 @@
+===================================================== BASIC OF BASICS =====================================================
+1. What is Java?
+Answer: Java is a high-level, object-oriented, platform-independent programming language that runs on the JVM (Java Virtual Machine), enabling "write once, run anywhere."
+
+2. What is the JVM?
+Answer: The JVM (Java Virtual Machine) is a virtual machine that executes Java bytecode, providing platform independence by translating bytecode into machine-specific instructions.
+
+3. What is the difference between JDK, JRE, and JVM?
+Answer: JDK (Java Development Kit) includes tools for developing Java apps (e.g., compiler). JRE (Java Runtime Environment) includes JVM and libraries to run apps. JVM executes bytecode.
+
+4. How do you compile and run a Java program?
+Answer: Compile with javac FileName.java to generate bytecode (FileName.class). Run with java FileName to execute the program.
+
+5. What is the main method in Java?
+Answer: The main method (public static void main(String[] args)) is the entry point of a Java program, executed by the JVM when the program starts.
+
+6. What are Java keywords?
+Answer: Keywords are reserved words (e.g., class, public, if, for) with predefined meanings that cannot be used as identifiers.
+
+7. What are data types in Java?
+Answer: Java has primitive types (int, double, boolean, etc.) for basic data and reference types (String, arrays, objects) for complex data.
+
+8. What are primitive data types in Java?
+Answer: Java’s eight primitive types are byte, short, int, long, float, double, char, and boolean.
+
+9. What is the difference between int and Integer?
+Answer: int is a primitive type, while Integer is a wrapper class that provides methods and allows null values.
+
+10. What is a variable in Java?
+Answer: A variable is a named memory location that stores data. It’s defined with a type, name, and optional initial value (e.g., int age = 25;).
+
+11. What is type casting in Java?
+Answer: Type casting converts a value from one data type to another, either implicitly (e.g., int to double) or explicitly (e.g., (int) 3.14).
+
+12. What are operators in Java?
+Answer: Operators perform operations on variables/values, including arithmetic (+, -), relational (==, >), logical (&&, ||), and assignment (=).
+
+13. What is the difference between == and equals()?
+Answer: == compares object references or primitive values, while equals() compares object content (e.g., String values). Override equals() for custom classes.
+
+14. What is a String in Java?
+Answer: String is an immutable class for representing text (e.g., "Hello"). It’s stored in the string pool for memory efficiency.
+
+15. How do you concatenate strings in Java?
+Answer: Use + (e.g., "Hello" + "World") or StringBuilder/StringBuffer for efficient concatenation in loops.
+
+16. What is an array in Java?
+Answer: An array is a fixed-size collection of elements of the same type (e.g., int[] numbers = {1, 2, 3};).
+
+17. How do you declare a multi-dimensional array?
+Answer: Declare with multiple brackets (e.g., int[][] matrix = new int[3][3];) for a 2D array.
+
+18. What is a class in Java?
+Answer: A class is a blueprint for objects, defining fields (data) and methods (behavior). Declared with class (e.g., class Car {}).
+
+19. What is an object in Java?
+Answer: An object is an instance of a class, created with new (e.g., Car myCar = new Car();).
+
+20. What is the this keyword?
+Answer: this refers to the current object, used to access instance variables or methods and resolve naming conflicts.
+
+21. What is a method in Java?
+Answer: A method is a block of code that performs a task, defined with a return type, name, and parameters (e.g., int add(int a, int b) { return a + b; }).
+
+22. What is method overloading?
+Answer: Method overloading allows multiple methods with the same name but different parameter lists (type, number, or order) in the same class.
+
+23. What is a constructor in Java?
+Answer: A constructor is a special method with the same name as the class, called during object creation to initialize fields (e.g., Car(String model) { this.model = model; }).
+
+24. What is the default constructor?
+Answer: The default constructor is a no-argument constructor automatically provided if no constructors are defined. It initializes fields to default values.
+
+25. What is the static keyword?
+Answer: static makes a field or method belong to the class, not an instance, accessible without creating an object (e.g., static int count;).
+
+26. What is a package in Java?
+Answer: A package is a namespace for organizing classes (e.g., java.util). Declared with package (e.g., package com.example;).
+
+27. What is the import statement?
+Answer: import allows access to classes from other packages (e.g., import java.util.Scanner;) without fully qualified names.
+
+28. What are access modifiers in Java?
+Answer: Access modifiers control visibility: public (accessible everywhere), protected (accessible in package and subclasses), default (package-private), private (class-only).
+
+29. What is an if statement?
+Answer: An if statement executes a block of code if a condition is true (e.g., if (age > 18) { System.out.println("Adult"); }).
+
+30. What is a switch statement?
+Answer: A switch statement selects a block of code to execute based on a variable’s value (e.g., switch (day) { case 1: ... }).
+
+31. What is a for loop?
+Answer: A for loop repeats a block of code for a specified number of iterations (e.g., for (int i = 0; i < 5; i++) { ... }).
+
+32. What is a while loop?
+Answer: A while loop repeats a block of code as long as a condition is true (e.g., while (count < 5) { ... }).
+
+33. What is a do-while loop?
+Answer: A do-while loop executes a block at least once, then repeats while a condition is true (e.g., do { ... } while (count < 5);).
+
+34. What is the break statement?
+Answer: break exits a loop or switch statement immediately (e.g., if (i == 3) break;).
+
+35. What is the continue statement?
+Answer: continue skips the current iteration of a loop and proceeds to the next (e.g., if (i % 2 == 0) continue;).
+
+36. What is exception handling in Java?
+Answer: Exception handling manages errors using try, catch, finally, and throw. Code in try is monitored, and catch handles exceptions.
+
+37. What is the difference between checked and unchecked exceptions?
+Answer: Checked exceptions (e.g., IOException) must be declared or handled. Unchecked exceptions (e.g., NullPointerException) are runtime errors and don’t require handling.
+
+38. What is the try-catch block?
+Answer: A try block contains code that might throw an exception, and a catch block handles it (e.g., try { ... } catch (Exception e) { ... }).
+
+39. What is the finally block?
+Answer: A finally block executes after try-catch, regardless of whether an exception occurs, often for cleanup (e.g., closing resources).
+
+40. What is the throw keyword?
+Answer: throw manually throws an exception (e.g., throw new IllegalArgumentException("Invalid input");).
+
+41. What is the throws keyword?
+Answer: throws declares exceptions a method might throw, requiring callers to handle them (e.g., void readFile() throws IOException).
+
+42. What is a wrapper class?
+Answer: A wrapper class (e.g., Integer, Double) wraps a primitive type, providing methods and allowing use in collections (e.g., Integer num = 5;).
+
+43. What is autoboxing and unboxing?
+Answer: Autoboxing converts primitives to wrapper objects (e.g., int to Integer). Unboxing converts wrappers to primitives (e.g., Integer to int).
+
+44. What is the Scanner class?
+Answer: Scanner (from java.util) reads input from sources like System.in (e.g., Scanner sc = new Scanner(System.in); int n = sc.nextInt();).
+
+45. What is the Math class?
+Answer: Math provides static methods for mathematical operations (e.g., Math.abs(-5), Math.sqrt(16)).
+
+46. What is a comment in Java?
+Answer: Comments explain code and are ignored by the compiler. Use // for single-line, /* */ for multi-line, and /** */ for Javadoc.
+
+47. What is the public access modifier?
+Answer: public makes a class, method, or field accessible from anywhere in the program.
+
+48. What is the private access modifier?
+Answer: private restricts access to within the same class, used for encapsulation.
+
+49. What is a constant in Java?
+Answer: A constant is a final variable with a fixed value, typically static (e.g., public static final int MAX = 100;).
+
+50. What are best practices for Java beginners?
+Answer: Use meaningful variable names, follow naming conventions (camelCase), comment code, handle exceptions, avoid hardcoding values, practice writing small programs, and debug systematically.
+
+================================================ OOP WITH JAVA ===========================================================
+
+OOP in Java
+1. What are the core principles of OOP in Java?
+Answer: The core principles are Encapsulation (data hiding), Inheritance (reusing code), Polymorphism (multiple forms), and Abstraction (hiding complexity).
+
+2. What is encapsulation in Java?
+Answer: Encapsulation binds data (fields) and methods together, restricting direct access to fields using private modifiers and providing access via getters and setters.
+
+3. How does inheritance work in Java?
+Answer: Inheritance allows a class to inherit fields and methods from a parent class using extends. Java supports single inheritance for classes but multiple for interfaces.
+
+4. What is polymorphism in Java?
+Answer: Polymorphism allows methods to take different forms: compile-time (method overloading) and runtime (method overriding using @Override).
+
+5. What is abstraction in Java?
+Answer: Abstraction hides implementation details and exposes only essential features using abstract classes or interfaces.
+
+6. What is the difference between an abstract class and an interface?
+Answer: An abstract class can have both abstract and concrete methods, while an interface only has abstract methods (until Java 8, which introduced default and static methods). A class can implement multiple interfaces but extend only one abstract class.
+
+7. What is the final keyword in Java?
+Answer: final makes a variable constant, a method non-overridable, or a class non-extendable.
+
+8. What is a constructor in Java?
+Answer: A constructor is a special method called when an object is created (new). It has the same name as the class and no return type.
+
+9. What is method overloading?
+Answer: Method overloading allows multiple methods with the same name but different parameter lists (type, number, or order) in the same class.
+
+10. What is method overriding?
+Answer: Method overriding allows a subclass to provide a specific implementation of a method defined in its superclass, using the same signature and @Override.
+
+Regular Expressions (Regex)
+11. What is a regular expression in Java?
+Answer: A regex is a pattern for matching strings. Java’s java.util.regex package provides Pattern and Matcher classes for regex operations.
+
+12. How do you use regex to validate an email in Java?
+Answer: Use Pattern.compile("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$") and matcher() to validate an email string.
+
+13. What does \\d mean in regex?
+Answer: \\d matches any digit (0-9). For example, \\d{3} matches exactly three digits.
+
+14. How do you replace all digits in a string using regex?
+Answer: Use string.replaceAll("\\d", "X") to replace all digits with "X".
+
+15. What is the difference between matches() and find() in regex?
+Answer: matches() checks if the entire string matches the pattern, while find() looks for the next subsequence that matches.
+
+Collections Framework
+16. What is the Java Collections Framework?
+Answer: The Collections Framework is a set of interfaces (e.g., List, Set, Map) and classes (e.g., ArrayList, HashSet, HashMap) for storing and manipulating groups of objects.
+
+17. What is the difference between ArrayList and LinkedList?
+Answer: ArrayList uses a dynamic array, offering fast random access but slow insertions/deletions. LinkedList uses a doubly-linked list, better for frequent modifications but slower access.
+
+18. What is a HashMap?
+Answer: HashMap is a key-value store that allows fast retrieval using hashing. It permits null keys/values and is not thread-safe.
+
+19. How does HashSet ensure uniqueness?
+Answer: HashSet uses a HashMap internally, storing elements as keys and checking for duplicates via hashCode() and equals().
+
+20. What is the difference between Comparable and Comparator?
+Answer: Comparable defines a natural ordering (compareTo) within a class, while Comparator provides an external comparison logic via compare.
+
+I/O (Input/Output)
+21. What is the difference between ByteStream and CharacterStream?
+Answer: ByteStream (e.g., FileInputStream) handles raw binary data, while CharacterStream (e.g., FileReader) handles character data with encoding support.
+
+22. How do you read a file in Java?
+Answer: Use Files.readAllLines(Paths.get("file.txt")) for simple reading or BufferedReader for line-by-line reading from a FileReader.
+
+23. How do you write to a file in Java?
+Answer: Use Files.write(Paths.get("file.txt"), content.getBytes()) or BufferedWriter with a FileWriter for efficient writing.
+
+24. What is Serializable?
+Answer: Serializable is a marker interface that allows objects to be serialized (converted to a byte stream) for I/O operations, like saving to a file.
+
+25. How do you handle exceptions in I/O operations?
+Answer: Use try-catch blocks to handle IOException. For modern APIs, use try-with-resources to auto-close resources (e.g., try (BufferedReader br = new BufferedReader(...))).
+
+Servlets
+26. What is a Servlet in Java?
+Answer: A Servlet is a Java class that handles HTTP requests and responses in a web application, running on a server like Tomcat.
+
+27. What is the role of web.xml in a Servlet application?
+Answer: web.xml is the deployment descriptor that configures servlets, mappings, and other web components. Modern Servlets use annotations like @WebServlet instead.
+
+28. How do you create a Servlet?
+Answer: Extend HttpServlet, override methods like doGet or doPost, and annotate with @WebServlet("/path") or configure in web.xml.
+
+29. What is the Servlet lifecycle?
+Answer: The lifecycle includes init() (initialization), service() (handling requests), and destroy() (cleanup). The container manages these phases.
+
+30. How do you handle form data in a Servlet?
+Answer: Use request.getParameter("name") in doPost to retrieve form data from an HttpServletRequest.
+
+Multithreading
+31. What is a thread in Java?
+Answer: A thread is a lightweight process that enables concurrent execution within a program. Java supports threads via Thread class or Runnable interface.
+
+32. How do you create a thread in Java?
+Answer: Extend Thread and override run(), or implement Runnable and pass it to a Thread object. Use start() to begin execution.
+
+33. What is the difference between synchronized and Lock?
+Answer: synchronized is a keyword for locking methods/blocks, while Lock (e.g., ReentrantLock) offers explicit control with methods like lock() and unlock().
+
+34. What is ExecutorService?
+Answer: ExecutorService is a framework for managing thread pools. Create it with Executors.newFixedThreadPool(n) and submit tasks using submit() or execute().
+
+35. What is the volatile keyword?
+Answer: volatile ensures a variable’s value is always read from and written to main memory, preventing thread-local caching issues.
+
+Design Patterns
+36. What is the Singleton pattern?
+Answer: Singleton ensures a class has only one instance and provides global access. Implement with a private constructor and a static getInstance() method.
+
+37. What is the Factory pattern?
+Answer: Factory creates objects without exposing instantiation logic. Use an abstract factory method or class to return objects based on input.
+
+38. What is the Observer pattern?
+Answer: Observer defines a one-to-many dependency where objects (observers) are notified of state changes in a subject. Java’s Observable and Observer support this.
+
+39. What is the Strategy pattern?
+Answer: Strategy defines a family of interchangeable algorithms. Clients choose an algorithm at runtime via interfaces or abstract classes.
+
+40. What is the Decorator pattern?
+Answer: Decorator dynamically adds responsibilities to objects by wrapping them in a decorator class that implements the same interface.
+
+Advanced Topics
+41. What is Stream API in Java?
+Answer: Introduced in Java 8, Stream API processes collections functionally with operations like map, filter, and reduce for concise, declarative code.
+
+42. How do you sort a list using Java 8?
+Answer: Use list.sort(Comparator.comparing(Class::getField)) or list.stream().sorted(Comparator.comparing(Class::getField)).collect(Collectors.toList()).
+
+43. What is a lambda expression?
+Answer: A lambda expression is a concise way to represent an anonymous function (e.g., (x, y) -> x + y) for functional interfaces like Runnable or Comparator.
+
+44. What is Optional in Java?
+Answer: Optional is a container for a value that may be null, reducing NullPointerException. Use Optional.of(value), orElse(), or ifPresent().
+
+45. How do you handle regex groups in Java?
+Answer: Use parentheses in regex (e.g., (\\d+)-(\\w+)), then access groups with Matcher.group(n) where n is the group number.
+
+46. What is ConcurrentHashMap?
+Answer: ConcurrentHashMap is a thread-safe Map that allows concurrent reads and writes with segmented locking, unlike Hashtable.
+
+47. How do you create a RESTful Servlet?
+Answer: Use @WebServlet, handle HTTP methods (doGet, doPost), and return JSON using a library like Jackson or Gson in the response.
+
+48. What is a thread pool?
+Answer: A thread pool is a collection of reusable threads managed by ExecutorService, reducing overhead of thread creation for concurrent tasks.
+
+49. What is the Adapter pattern?
+Answer: Adapter converts the interface of a class into another interface clients expect, enabling incompatible classes to work together.
+
+50. What are best practices for Java programming?
+Answer: Follow OOP principles, use meaningful names, handle exceptions properly, leverage Java 8+ features (Streams, Lambdas), synchronize threads safely, apply design patterns appropriately, and write unit tests.
+
+================================================== DATABASE =========================================================
+1. What is Hibernate in the context of Spring Boot?
+Answer: Hibernate is an ORM (Object-Relational Mapping) framework that maps Java objects to database tables. In Spring Boot, it’s the default JPA provider, simplifying database interactions.
+
+2. What is JPA?
+Answer: JPA (Java Persistence API) is a specification for ORM in Java. It defines standards for mapping, querying, and managing entities, with Hibernate as a popular implementation.
+
+3. How does Spring Boot integrate with Hibernate and JPA?
+Answer: Spring Boot auto-configures Hibernate as the JPA provider when spring-boot-starter-data-jpa is included. It simplifies setup with auto-configured data sources and entity management.
+
+4. What is the role of spring-boot-starter-data-jpa?
+Answer: This starter dependency includes Hibernate, Spring Data JPA, and other libraries to enable JPA-based database operations with minimal configuration.
+
+5. What is an @Entity in JPA?
+Answer: @Entity marks a Java class as a JPA entity, mapping it to a database table. Each instance represents a table row, with fields mapped to columns.
+
+6. How do you define a primary key in JPA?
+Answer: Use @Id on a field to mark it as the primary key. Optionally, use @GeneratedValue to auto-generate values (e.g., strategy = GenerationType.AUTO).
+
+7. What is the purpose of @Table?
+Answer: @Table specifies the database table name for an @Entity. Use it to customize the table name (e.g., @Table(name = "users")) if it differs from the class name.
+
+8. How do you map columns in JPA?
+Answer: Use @Column to map a field to a specific database column. Customize attributes like name, nullable, or length (e.g., @Column(name = "user_name")).
+
+9. What is a JpaRepository?
+Answer: JpaRepository is a Spring Data JPA interface that provides CRUD operations and query methods for an entity. Extend it with your entity type and ID type.
+
+10. How do you create a custom query in Spring Data JPA?
+Answer: Use @Query with JPQL (Java Persistence Query Language) or native SQL in a repository interface (e.g., @Query("SELECT u FROM User u WHERE u.name = ?1")).
+
+11. What is @Transactional?
+Answer: @Transactional ensures a method runs within a database transaction, rolling back changes if an error occurs. It’s essential for data consistency.
+
+12. How do you configure a database in Spring Boot for JPA?
+Answer: Add spring-boot-starter-data-jpa and a database driver (e.g., h2, mysql). Set properties like spring.datasource.url, username, and password in application.properties.
+
+13. What is spring.jpa.hibernate.ddl-auto?
+Answer: This property controls Hibernate’s schema generation: create, update, validate, or none. For example, spring.jpa.hibernate.ddl-auto=update updates the schema automatically.
+
+14. How do you map a one-to-one relationship in JPA?
+Answer: Use @OneToOne on a field, with @JoinColumn to specify the foreign key column (e.g., @OneToOne @JoinColumn(name = "address_id")).
+
+15. How do you map a one-to-many relationship in JPA?
+Answer: Use @OneToMany on the owning side and @ManyToOne on the inverse side. Use @JoinColumn to define the foreign key (e.g., @OneToMany(mappedBy = "user")).
+
+16. What is lazy loading in Hibernate?
+Answer: Lazy loading defers fetching related entities until they’re accessed, reducing database queries. Use fetch = FetchType.LAZY in @OneToMany or @ManyToOne.
+
+17. What is eager loading in Hibernate?
+Answer: Eager loading fetches related entities immediately with the parent entity. Use fetch = FetchType.EAGER for critical relationships, but it may impact performance.
+
+18. How do you handle the N+1 select problem in Hibernate?
+Answer: Use JOIN FETCH in JPQL queries, @EntityGraph, or batch fetching (@BatchSize) to fetch related entities in a single query, avoiding multiple SELECTs.
+
+19. What is @EntityManager in JPA?
+Answer: EntityManager is a JPA interface for interacting with the persistence context, performing operations like persist, merge, remove, and querying entities.
+
+20. How do you use EntityManager in Spring Boot?
+Answer: Inject EntityManager using @PersistenceContext in a repository or service. Use it for complex queries or operations not supported by JpaRepository.
+
+21. What is the persistence context in Hibernate?
+Answer: The persistence context is a cache of managed entities in a transaction. Hibernate tracks changes to these entities and synchronizes them with the database.
+
+22. How do you enable Hibernate logging?
+Answer: Set spring.jpa.show-sql=true to log SQL queries and spring.jpa.properties.hibernate.format_sql=true to format them. Adjust logging levels for org.hibernate.
+
+23. What is @NamedQuery?
+Answer: @NamedQuery defines reusable JPQL queries on an entity class (e.g., @NamedQuery(name = "User.findByName", query = "SELECT u FROM User u WHERE u.name = :name")).
+
+24. How do you handle optimistic locking in JPA?
+Answer: Use @Version on a field (e.g., Long or Integer) to track entity versions. Hibernate throws an OptimisticLockException if concurrent updates conflict.
+
+25. What is pessimistic locking in JPA?
+Answer: Pessimistic locking locks database rows during a transaction to prevent concurrent updates. Use LockModeType.PESSIMISTIC_WRITE with EntityManager or @Query.
+
+26. How do you map an enum in JPA?
+Answer: Use @Enumerated with EnumType.STRING or EnumType.ORDINAL to map an enum to a database column (e.g., @Enumerated(EnumType.STRING)).
+
+27. What is @Embedded and @Embeddable?
+Answer: @Embeddable marks a class as a reusable component, and @Embedded includes it in an entity. It’s used for complex types without a separate table.
+
+28. How do you handle cascading in JPA?
+Answer: Use cascade = CascadeType.ALL (or specific types like PERSIST, MERGE) in @OneToMany or @OneToOne to propagate operations (e.g., save) to related entities.
+
+29. What is the difference between persist and merge in JPA?
+Answer: persist adds a new entity to the persistence context, while merge updates an existing detached entity by copying its state to a managed entity.
+
+30. How do you enable second-level caching in Hibernate?
+Answer: Add a caching provider (e.g., EhCache) and set spring.jpa.properties.hibernate.cache.use_second_level_cache=true. Annotate entities with @Cacheable.
+
+31. What is @Cacheable in Hibernate?
+Answer: @Cacheable enables second-level caching for an entity, storing it in a cache to reduce database queries. Configure with a caching provider like EhCache.
+
+32. How do you handle large datasets in JPA?
+Answer: Use pagination (Pageable in JpaRepository), streaming results (Stream with @Query), or batch processing to avoid loading large datasets into memory.
+
+33. What is @DynamicUpdate in Hibernate?
+Answer: @DynamicUpdate ensures Hibernate generates SQL UPDATE statements only for modified fields, improving performance by reducing unnecessary updates.
+
+34. How do you map a many-to-many relationship in JPA?
+Answer: Use @ManyToMany with a join table specified by @JoinTable. Define the owning side with @JoinColumn for the join table’s columns.
+
+35. What is @QueryHints?
+Answer: @QueryHints specifies JPA query hints, such as caching or locking, for a query (e.g., @QueryHints({@QueryHint(name = "org.hibernate.cacheable", value = "true")})).
+
+36. How do you test JPA repositories in Spring Boot?
+Answer: Use spring-boot-starter-test with @DataJpaTest to test repositories. Mock dependencies with @MockBean and verify queries with TestEntityManager.
+
+37. What is Criteria API in JPA?
+Answer: The Criteria API allows programmatic construction of type-safe queries using Java code, offering flexibility over JPQL for dynamic queries.
+
+38. How do you use the Criteria API in Spring Boot?
+Answer: Inject EntityManager, create a CriteriaBuilder, and build a CriteriaQuery to define the query programmatically. Execute it using EntityManager.
+
+39. What is @SequenceGenerator?
+Answer: @SequenceGenerator defines a database sequence for generating primary key values (e.g., @SequenceGenerator(name = "user_seq", sequenceName = "user_sequence")).
+
+40. How do you handle transactions across multiple repositories?
+Answer: Use @Transactional at the service layer to wrap multiple repository calls in a single transaction, ensuring atomicity and consistency.
+
+41. What is @Inheritance in JPA?
+Answer: @Inheritance defines how entity hierarchies are mapped to the database. Strategies include SINGLE_TABLE, TABLE_PER_CLASS, and JOINED.
+
+42. How do you map a composite key in JPA?
+Answer: Use @EmbeddedId or @IdClass to define a composite key. Create a separate class for the key with fields annotated as @Column.
+
+43. What is @Lob in JPA?
+Answer: @Lob maps a field to a large object type (e.g., CLOB for text, BLOB for binary data) in the database, suitable for large data storage.
+
+44. How do you handle schema migrations in Spring Boot?
+Answer: Use Flyway or Liquibase with spring-boot-starter-flyway or spring-boot-starter-liquibase. Define migrations in SQL or YAML files.
+
+45. What is @Modifying in Spring Data JPA?
+Answer: @Modifying marks a @Query that performs updates or deletes, ensuring the persistence context is flushed and cleared after execution.
+
+46. How do you enable auditing in JPA?
+Answer: Use Spring Data JPA’s auditing with @EnableJpaAuditing. Annotate entity fields with @CreatedDate, @LastModifiedDate, @CreatedBy, or @LastModifiedBy.
+
+47. What is @Temporal in JPA?
+Answer: @Temporal specifies the precision of date/time fields (e.g., TemporalType.DATE, TemporalType.TIME, TemporalType.TIMESTAMP) for legacy java.util.Date or Calendar.
+
+48. How do you handle soft deletes in JPA?
+Answer: Add a boolean field (e.g., isDeleted) and use @Where(clause = "is_deleted = false") or custom queries to filter out soft-deleted records.
+
+49. What is @EntityGraph?
+Answer: @EntityGraph defines a fetch graph to control which related entities are loaded, reducing lazy loading issues and optimizing queries.
+
+50. What are best practices for Hibernate and JPA in Spring Boot?
+Answer: Use spring.jpa.hibernate.ddl-auto=validate in production, enable lazy loading for performance, handle N+1 issues, use transactions properly, validate inputs, and test thoroughly.
+
+======================================================  SPRING BOOT ==================================================
+
+1. What is Spring Boot?
+Answer: Spring Boot is an open-source framework that simplifies the development of Spring-based applications by providing auto-configuration, embedded servers, and a streamlined setup process. It reduces boilerplate code and enables developers to focus on business logic.
+
+2. What are the key features of Spring Boot?
+Answer: Key features include auto-configuration, embedded servers (e.g., Tomcat, Jetty), starter dependencies, production-ready features (actuators), and simplified configuration with annotations and properties/YAML files.
+
+3. How does Spring Boot differ from Spring Framework?
+Answer: Spring Boot builds on Spring Framework but adds auto-configuration, embedded servers, and starters to simplify setup and development. Spring Framework requires more manual configuration.
+
+4. What is a Spring Boot Starter?
+Answer: A Spring Boot Starter is a dependency that bundles related libraries for a specific functionality (e.g., spring-boot-starter-web for web apps). It simplifies dependency management by including all necessary libraries.
+
+5. What is the purpose of @SpringBootApplication?
+Answer: @SpringBootApplication is a convenience annotation that combines @EnableAutoConfiguration, @ComponentScan, and @Configuration. It marks the main class and enables auto-configuration and component scanning.
+
+6. How does auto-configuration work in Spring Boot?
+Answer: Auto-configuration automatically configures beans and settings based on the classpath and defined dependencies. It uses conditional annotations (e.g., @ConditionalOnClass) to apply configurations only when certain conditions are met.
+
+7. What is the role of application.properties or application.yml?
+Answer: These files configure Spring Boot application settings, such as database connections, server ports, and custom properties. YAML is more readable, while properties use key-value pairs.
+
+8. How do you change the default port in Spring Boot?
+Answer: Set server.port=8081 in application.properties or server.port: 8081 in application.yml to change the default port (8080).
+
+9. What is Spring Boot Actuator?
+Answer: Spring Boot Actuator provides production-ready features like health checks, metrics, and monitoring endpoints (e.g., /actuator/health). It’s enabled via the spring-boot-starter-actuator dependency.
+
+10. How do you create a REST API in Spring Boot?
+Answer: Use @RestController and @RequestMapping (or specific annotations like @GetMapping, @PostMapping) to define endpoints. Include spring-boot-starter-web for REST support.
+
+11. What is @RestController?
+Answer: @RestController is a specialized @Controller that marks a class as a RESTful controller, automatically serializing return objects to JSON/XML.
+
+12. How do you handle HTTP methods in Spring Boot?
+Answer: Use annotations like @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, and @PatchMapping to handle HTTP GET, POST, PUT, DELETE, and PATCH requests, respectively.
+
+13. What is Spring Data JPA?
+Answer: Spring Data JPA simplifies database access by providing a repository abstraction over JPA. It reduces boilerplate code for CRUD operations using interfaces like JpaRepository.
+
+14. How do you configure a database in Spring Boot?
+Answer: Add spring-boot-starter-data-jpa and a database driver (e.g., h2, mysql). Configure the database URL, username, and password in application.properties (e.g., spring.datasource.url).
+
+15. What is the purpose of @Entity?
+Answer: @Entity marks a class as a JPA entity, mapping it to a database table. Each instance represents a row in the table.
+
+16. How do you define a repository in Spring Data JPA?
+Answer: Create an interface extending JpaRepository<T, ID>, where T is the entity class and ID is the primary key type. Spring auto-generates CRUD methods.
+
+17. What is @Autowired?
+Answer: @Autowired injects dependencies automatically by type. It’s used to wire beans, such as services or repositories, into other components.
+
+18. What is dependency injection in Spring Boot?
+Answer: Dependency injection is a design pattern where dependencies are passed to a class rather than created inside it. Spring Boot uses it to manage beans and promote loose coupling.
+
+19. How do you enable Spring Security in Spring Boot?
+Answer: Add spring-boot-starter-security to your project. Configure security settings using a @Configuration class extending WebSecurityConfigurerAdapter or using @EnableWebSecurity.
+
+20. What is @Configuration?
+Answer: @Configuration marks a class as a source of bean definitions. It’s used to define beans and configure Spring’s application context.
+
+21. How do you create a custom Spring Boot Starter?
+Answer: Create a module with auto-configuration classes, a META-INF/spring.factories file listing the configuration, and package it as a dependency. Use @Conditional annotations for dynamic configuration.
+
+22. What is @Bean?
+Answer: @Bean is a method-level annotation in a @Configuration class that defines a Spring bean. The method’s return object is registered in the application context.
+
+23. How do you handle exceptions in Spring Boot?
+Answer: Use @ControllerAdvice with @ExceptionHandler methods to handle exceptions globally. Return custom error responses with @ResponseStatus or ResponseEntity.
+
+24. What is @Transactional?
+Answer: @Transactional marks a method or class to run within a database transaction. It ensures data consistency by rolling back changes if an error occurs.
+
+25. How do you integrate Spring Boot with Hibernate?
+Answer: Spring Boot auto-configures Hibernate as the JPA provider when using spring-boot-starter-data-jpa. Configure Hibernate properties in application.properties (e.g., spring.jpa.hibernate.ddl-auto).
+
+26. What is the purpose of @EnableAutoConfiguration?
+Answer: @EnableAutoConfiguration enables Spring Boot’s auto-configuration, automatically configuring beans based on dependencies and classpath.
+
+27. How do you use profiles in Spring Boot?
+Answer: Define profiles (e.g., dev, prod) using spring.profiles.active in application.properties or as a command-line argument (--spring.profiles.active=dev). Use profile-specific files like application-dev.properties.
+
+28. What is Spring Boot DevTools?
+Answer: Spring Boot DevTools enhances development by enabling hot reloading, automatic restarts, and live reload for faster feedback. Add spring-boot-devtools to enable it.
+
+29. How do you implement caching in Spring Boot?
+Answer: Enable caching with @EnableCaching and use @Cacheable, @CachePut, or @CacheEvict on methods. Add a caching provider like EhCache or Caffeine via dependencies.
+
+30. What is @Scheduled?
+Answer: @Scheduled annotates a method to run at fixed intervals or based on a cron expression. Enable scheduling with @EnableScheduling.
+
+31. How do you integrate Spring Boot with Kafka?
+Answer: Add spring-kafka dependency. Configure Kafka properties (e.g., spring.kafka.bootstrap-servers). Use @KafkaListener for consuming messages and KafkaTemplate for producing messages.
+
+32. What is Spring Boot’s embedded server?
+Answer: Spring Boot includes embedded servers like Tomcat, Jetty, or Undertow, allowing applications to run without an external server. Configure via application.properties (e.g., server.servlet.context-path).
+
+33. How do you customize Spring Boot’s auto-configuration?
+Answer: Override auto-configured beans by defining your own in a @Configuration class or exclude specific auto-configurations using @EnableAutoConfiguration(exclude = {Class.class}).
+
+34. What is @ComponentScan?
+Answer: @ComponentScan tells Spring to scan specified packages for components, services, or repositories annotated with @Component, @Service, @Repository, etc.
+
+35. How do you validate input in Spring Boot?
+Answer: Use javax.validation annotations (e.g., @NotNull, @Size) on DTO fields and @Valid in controller methods. Add spring-boot-starter-validation for validation support.
+
+36. What is the purpose of @Service?
+Answer: @Service is a stereotype annotation marking a class as a service layer component, typically containing business logic. It’s a specialization of @Component.
+
+37. How do you implement logging in Spring Boot?
+Answer: Spring Boot uses SLF4J with Logback by default. Use Logger from org.slf4j.LoggerFactory and configure logging levels in application.properties (e.g., logging.level.root=INFO).
+
+38. What is @Qualifier?
+Answer: @Qualifier is used with @Autowired to specify which bean to inject when multiple beans of the same type exist. It disambiguates dependency injection.
+
+39. How do you integrate Spring Boot with Thymeleaf?
+Answer: Add spring-boot-starter-thymeleaf dependency. Create HTML templates in src/main/resources/templates and use Thymeleaf syntax (e.g., th:text) to bind data.
+
+40. What is @PathVariable?
+Answer: @PathVariable extracts values from a URI path segment (e.g., /users/{id}). It binds the segment to a method parameter in a controller.
+
+41. How do you test a Spring Boot application?
+Answer: Use spring-boot-starter-test for testing. Write unit tests with JUnit and Mockito, and integration tests with @SpringBootTest or @WebMvcTest for specific layers.
+
+42. What is @MockBean?
+Answer: @MockBean creates and injects a mock bean into the Spring context during testing, allowing you to mock dependencies like services or repositories.
+
+43. How do you secure REST APIs in Spring Boot?
+Answer: Use Spring Security with spring-boot-starter-security. Configure authentication (e.g., JWT, OAuth2) and authorization (e.g., roles) in a @Configuration class.
+
+44. What is @RequestBody?
+Answer: @RequestBody binds the HTTP request body to a method parameter, typically used in @PostMapping or @PutMapping to deserialize JSON/XML into a Java object.
+
+45. How do you handle CORS in Spring Boot?
+Answer: Enable CORS globally with @CrossOrigin on controllers or methods, or configure it in a @Configuration class using WebMvcConfigurer and addCorsMappings.
+
+46. What is Spring Boot’s CommandLineRunner?
+Answer: CommandLineRunner is an interface for running code after the application starts. Implement it and annotate with @Component to execute startup logic.
+
+47. How do you integrate Spring Boot with MongoDB?
+Answer: Add spring-boot-starter-data-mongodb. Configure MongoDB properties (e.g., spring.data.mongodb.uri). Use MongoRepository or MongoTemplate for data access.
+
+48. What is @EnableTransactionManagement?
+Answer: @EnableTransactionManagement enables Spring’s annotation-driven transaction management, allowing @Transactional to work for database operations.
+
+49. How do you deploy a Spring Boot application?
+Answer: Package the app as a JAR (mvn package) and run with java -jar app.jar, or deploy to a server like Tomcat as a WAR. Use cloud platforms like AWS, Heroku, or Docker for scalability.
+
+50. What are Spring Boot’s best practices?
+Answer: Use starters for dependency management, externalize configuration, leverage profiles, enable actuators for monitoring, validate inputs, handle exceptions globally, and write comprehensive tests.
+
+This Q&A covers the essentials and advanced topics to help you master Spring Boot. Practice these concepts through hands-on projects to solidify your expertise!
+
+
+================================================================= SOME JAVA TRICKS ============================================
+
+1. Q: What are the four main principles of OOP?
+   A: The four main principles are:
+   - Encapsulation: Bundling data with methods that operate on that data
+   - Abstraction: Hiding complex implementation details
+   - Inheritance: Creating new classes from existing ones
+   - Polymorphism: Ability of objects to take on many forms
+
+2. Q: What is the difference between a class and an object in Java?
+   A: A class is a blueprint or template that defines the structure and behavior (data members and methods) that the objects of that class will have. An object is an instance of a class - a concrete entity created at runtime based on the class definition.
+
+3. Q: Explain the "is-a" and "has-a" relationships in Java.
+   A: "Is-a" represents inheritance (extends) - e.g., Dog is an Animal. "Has-a" represents composition - e.g., Car has an Engine. "Is-a" is implemented using inheritance, while "has-a" is implemented by creating instance variables that reference other objects.
+
+4. Q: What is method overloading vs method overriding?
+   A: Method overloading occurs when multiple methods have the same name but different parameters (number, type, or order) in the same class. Method overriding occurs when a subclass provides a specific implementation of a method already defined in its superclass, with the same signature.
+
+5. Q: What is the difference between abstraction and encapsulation?
+   A: Abstraction focuses on hiding complexity by showing only essential features (using abstract classes/interfaces). Encapsulation focuses on protecting data by bundling it with methods that operate on that data (using private fields with public getters/setters).
+
+6. Q: Why is Java not 100% object-oriented?
+   A: Java is not 100% object-oriented because it uses primitive data types (int, char, boolean, etc.) which are not objects. Also, static methods and variables can be accessed without creating objects.
+
+7. Q: What is the singleton pattern and how is it implemented in Java?
+   A: The singleton pattern ensures a class has only one instance and provides a global point of access to it. Implementation:
+   ```java
+   public class Singleton {
+       private static Singleton instance;
+       private Singleton() {}
+       public static Singleton getInstance() {
+           if (instance == null) {
+               instance = new Singleton();
+           }
+           return instance;
+       }
+   }
+   ```
+
+8. Q: What is the difference between composition and inheritance?
+   A: Composition implies a "has-a" relationship where a class contains references to other objects, while inheritance implies an "is-a" relationship. Composition is generally preferred over inheritance as it provides better flexibility and avoids issues with fragile base classes.
+
+9. Q: What are the advantages of OOP over procedural programming?
+   A: Advantages include:
+   - Better code organization through encapsulation
+   - Code reusability through inheritance
+   - Easier maintenance and modification
+   - Better modeling of real-world scenarios
+   - Polymorphism allows more flexible code
+
+10. Q: What is object cloning in Java?
+    A: Object cloning is the process of creating an exact copy of an object. In Java, it's implemented using the Cloneable interface and the clone() method. There are two types: shallow cloning (copies primitive values and object references) and deep cloning (creates new copies of referenced objects).
+
+11. Q: What is the difference between static and dynamic binding in Java?
+    A: Static binding (early binding) occurs at compile time (e.g., method overloading, private/final/static methods). Dynamic binding (late binding) occurs at runtime (e.g., method overriding where JVM determines which method to call based on the actual object type).
+
+12. Q: What is coupling and cohesion in OOP?
+    A: Coupling refers to the degree of interdependence between classes (low coupling is better). Cohesion refers to how closely the responsibilities of a class are related (high cohesion is better). Good design aims for low coupling and high cohesion.
+
+13. Q: What is the Liskov Substitution Principle?
+    A: One of the SOLID principles stating that objects of a superclass should be replaceable with objects of its subclasses without breaking the application. Formally: if S is a subtype of T, then objects of type T may be replaced with objects of type S.
+
+14. Q: What is the Open/Closed Principle?
+    A: A SOLID principle stating that software entities should be open for extension but closed for modification. This means we should be able to add new functionality without changing existing code, typically achieved through abstraction and polymorphism.
+
+15. Q: What is the difference between an abstract class and an interface in Java 8+?
+    A: Before Java 8, abstract classes could have implemented methods while interfaces couldn't. Now both can have method implementations (default methods in interfaces). Key differences:
+    - A class can implement multiple interfaces but extend only one abstract class
+    - Interfaces can't have constructors or instance fields
+    - Abstract classes can have non-final methods, interfaces' methods are implicitly abstract
+
+16. Q: What is method hiding in Java?
+    A: Method hiding occurs when a subclass defines a static method with the same signature as a static method in the superclass. Unlike method overriding (instance methods), the method called depends on the reference type, not the object type.
+
+17. Q: What is the diamond problem in inheritance and how does Java handle it?
+    A: The diamond problem occurs when a class inherits from two classes that have a common ancestor, creating ambiguity. Java handles it by not allowing multiple inheritance of classes (a class can extend only one class), but allows multiple interface implementation where default methods can cause similar issues, resolved by requiring the subclass to override the ambiguous method.
+
+18. Q: What is object immutability and how is it achieved in Java?
+    A: An immutable object is one whose state cannot be modified after creation. Achieved by:
+    - Declaring the class as final
+    - Making all fields final and private
+    - No setter methods
+    - Making mutable fields defensive copies in constructor/getters
+    - Ensuring methods can't be overridden
+
+19. Q: What is the difference between aggregation and composition?
+    A: Both are forms of association (has-a relationship). Composition is a strong relationship where the child cannot exist without the parent (e.g., House and Room). Aggregation is a weaker relationship where the child can exist independently (e.g., Department and Professor).
+
+20. Q: What is the "instanceof" operator used for in Java?
+    A: The instanceof operator checks whether an object is an instance of a particular class or interface, or a subclass/subinterface thereof. Returns true if the object is an instance, false otherwise. Example: `if(obj instanceof String) {...}`
+
+ Inheritance & Polymorphism (21-40)
+
+21. Q: Can you override a private or static method in Java?
+    A: No, private methods are not visible to subclasses and thus cannot be overridden. Static methods can be redeclared in subclasses (method hiding), but this is not true overriding as polymorphism doesn't apply - the method called depends on the reference type.
+
+22. Q: What is covariant return type in Java?
+    A: Covariant return type allows an overriding method to return a subtype of the return type declared in the overridden method. Introduced in Java 5. Example:
+    ```java
+    class A { A get() { return this; } }
+    class B extends A { 
+        @Override 
+        B get() { return this; } // covariant return
+    }
+    ```
+
+23. Q: Why is multiple inheritance not supported in Java through classes?
+    A: Java doesn't support multiple inheritance through classes to avoid complexity and ambiguity (diamond problem). If two superclasses have methods with the same signature, it would be unclear which one to inherit. Interfaces provide a form of multiple inheritance without these issues.
+
+24. Q: What is the difference between compile-time polymorphism and runtime polymorphism?
+    A: Compile-time polymorphism (static binding) is achieved through method overloading - the method to call is determined at compile time. Runtime polymorphism (dynamic binding) is achieved through method overriding - the method to call is determined at runtime based on the actual object type.
+
+25. Q: Can you override a non-static method as static or vice versa?
+    A: No, you cannot override a non-static method as static or vice versa. Attempting to do so will result in a compilation error. The overriding method must have the same signature as the overridden method, including the static/non-static modifier.
+
+26. Q: What is the purpose of the "super" keyword in Java?
+    A: The super keyword is used to:
+    - Access superclass methods/fields that are overridden/hidden by the subclass
+    - Explicitly call a superclass constructor (super() must be first statement in constructor)
+    - Resolve ambiguity when a subclass has methods/fields with same name as superclass
+
+27. Q: What happens if both superclass and subclass have a field with the same name?
+    A: The fields are both present in the subclass object but the subclass field hides the superclass field. The superclass field can be accessed using super.fieldName. This is called field hiding and is generally discouraged as it can lead to confusing code.
+
+28. Q: Can a constructor be overridden or inherited?
+    A: No, constructors cannot be overridden because they are not methods and they have the same name as the class. They also cannot be inherited - each class must define its own constructors, though they can call superclass constructors using super().
+
+29. Q: What is the order of constructor calling in multilevel inheritance?
+    A: In multilevel inheritance, constructors are called from the topmost superclass down to the most specific subclass. The order is: Object → Grandparent → Parent → Child. Each constructor implicitly or explicitly calls its superclass constructor before executing its own body.
+
+30. Q: Can you make a constructor final, static or abstract?
+    A: No, constructors cannot be final, static, or abstract. These modifiers are not allowed with constructors as they wouldn't make sense:
+    - final: constructors can't be inherited anyway
+    - static: constructors initialize specific instances
+    - abstract: can't create instances of abstract classes directly
+
+31. Q: What is a marker interface and how is it different from a regular interface?
+    A: A marker interface is an empty interface (no methods or fields) that provides runtime type information about objects. Examples: Serializable, Cloneable. They indicate a capability or property of the class. Regular interfaces define behavior through method signatures.
+
+32. Q: What is the difference between early binding and late binding?
+    A: Early binding (static binding) occurs at compile time where the method to call is determined by the reference type. Late binding (dynamic binding) occurs at runtime where the method to call is determined by the actual object type. Java uses late binding for all non-static, non-private, non-final methods.
+
+33. Q: Can we override the main() method in Java?
+    A: Technically yes, you can declare a main method in a subclass with the same signature, but this is method hiding, not overriding. The JVM will always call the main method based on the class used to start the application. It's not a polymorphic method call.
+
+34. Q: What is the purpose of the "final" keyword in inheritance?
+    A: The final keyword can be used to:
+    - Prevent inheritance (final class cannot be extended)
+    - Prevent method overriding (final method cannot be overridden)
+    - Create constant variables (final variables cannot be reassigned)
+
+35. Q: What is a virtual method in Java?
+    A: In Java, all non-static, non-private, non-final methods are virtual by default, meaning they can be overridden in subclasses and support runtime polymorphism. The JVM determines which version of the method to call based on the actual object type at runtime.
+
+36. Q: Can we override a method with different access modifiers?
+    A: You can override a method with the same or less restrictive access modifier, but not more restrictive. For example:
+    - protected method can be overridden as public
+    - public method cannot be overridden as protected or private
+    This follows the Liskov Substitution Principle.
+
+37. Q: What is the difference between method hiding and method overriding?
+    A: Method hiding occurs with static methods - the method called depends on the reference type. Method overriding occurs with instance methods - the method called depends on the actual object type. Method hiding doesn't support polymorphism like method overriding does.
+
+38. Q: Can we change the return type of the overridden method?
+    A: Normally, the return type must be the same, but since Java 5, covariant return types are allowed where the overriding method can return a subclass of the return type declared in the overridden method. Primitive return types must match exactly.
+
+39. Q: What is the purpose of the @Override annotation?
+    A: The @Override annotation indicates that a method is intended to override a method in a superclass. It helps catch errors at compile time if the method doesn't actually override anything (due to typos, signature changes, etc.). It's optional but considered good practice.
+
+40. Q: Can we achieve runtime polymorphism by data members in Java?
+    A: No, runtime polymorphism is achieved only through methods, not data members. Field access is resolved at compile time based on the reference type, not the actual object type. This is why it's generally better to access fields through methods.
+
+ Abstraction & Interfaces (41-60)
+
+41. Q: When would you use an abstract class vs an interface?
+    A: Use an abstract class when:
+    - You want to share code among related classes
+    - You need to declare non-public members
+    - You need a class with state (instance variables)
+    Use an interface when:
+    - You want to define a contract for unrelated classes
+    - You need multiple inheritance of type
+    - You want to specify behavior without implementation
+
+42. Q: Can an abstract class have a constructor?
+    A: Yes, an abstract class can have a constructor. While you can't instantiate an abstract class directly, the constructor is called when a concrete subclass is instantiated. Abstract class constructors are often used to initialize common state for subclasses.
+
+43. Q: Can an interface have constructors in Java?
+    A: No, interfaces cannot have constructors. Interfaces are meant to define behavior contracts, not implementation or state. All methods in an interface (before Java 8) were abstract and had no implementation, so there was nothing to construct.
+
+44. Q: What are default methods in interfaces and why were they introduced?
+    A: Default methods (Java 8+) are interface methods with implementation, marked with the "default" keyword. They were introduced to allow adding new methods to interfaces without breaking existing implementations. Example:
+    ```java
+    interface Vehicle {
+        default void print() {
+            System.out.println("I am a vehicle!");
+        }
+    }
+    ```
+
+45. Q: What are static methods in interfaces?
+    A: Static methods in interfaces (Java 8+) are methods defined with the static keyword that contain implementation. They belong to the interface and are called using the interface name (InterfaceName.methodName()). They can't be overridden or called through implementing class instances.
+
+46. Q: What are private methods in interfaces?
+    A: Private methods in interfaces (Java 9+) allow breaking down default or static methods into smaller, reusable components while keeping these helper methods hidden from implementing classes. They can be static or instance methods but are only accessible within the interface.
+
+47. Q: Can an interface extend multiple interfaces in Java?
+    A: Yes, an interface can extend multiple interfaces. This is how Java supports multiple inheritance for interfaces. Example:
+    ```java
+    interface A { void a(); }
+    interface B { void b(); }
+    interface C extends A, B { void c(); }
+    ```
+    A class implementing C would need to implement all methods from A, B, and C.
+
+48. Q: What is a functional interface in Java?
+    A: A functional interface is an interface with exactly one abstract method (SAM - Single Abstract Method). It may have any number of default or static methods. They are the basis of lambda expressions. Examples: Runnable, Comparator, Predicate. Marked with @FunctionalInterface annotation.
+
+49. Q: Can we declare an interface as final in Java?
+    A: No, interfaces cannot be declared as final. The whole purpose of an interface is to be implemented by classes or extended by other interfaces. Making an interface final would prevent this, contradicting its purpose.
+
+50. Q: What is the difference between an abstract class with all abstract methods and an interface?
+    A: Even with all abstract methods, differences remain:
+    - Abstract class can have constructors, interfaces cannot
+    - Abstract class can have instance variables, interfaces can only have constants
+    - A class can implement multiple interfaces but extend only one abstract class
+    - Interface fields are public static final by default
+    - Interface methods are public by default
+
+51. Q: Can we declare an abstract method as private or final?
+    A: No, abstract methods cannot be private (they must be implemented by subclasses) or final (they must be able to be overridden). Abstract methods are implicitly meant to be overridden, so any modifier preventing this would be contradictory.
+
+52. Q: What is the purpose of the @FunctionalInterface annotation?
+    A: The @FunctionalInterface annotation indicates that an interface is intended to be a functional interface (exactly one abstract method). It's optional but helps catch errors at compile time if the interface violates the functional interface requirements.
+
+53. Q: Can a class implement two interfaces with the same default method?
+    A: If a class implements two interfaces with the same default method signature, it results in a compilation error unless the class overrides the method to resolve the ambiguity. The overriding method can call one of the interface's default methods using InterfaceName.super.methodName().
+
+54. Q: Can an interface extend a class in Java?
+    A: No, an interface cannot extend a class. Interfaces can only extend other interfaces. The extends clause in an interface declaration can only contain the names of other interfaces, not classes.
+
+55. Q: What is the difference between an abstract class and a concrete class?
+    A: An abstract class cannot be instantiated and may contain abstract methods (without implementation) that must be implemented by subclasses. A concrete class can be instantiated and provides complete implementation of all its methods (no abstract methods).
+
+56. Q: Can we declare an interface method as protected or private?
+    A: Before Java 9, interface methods could only be public. Since Java 9, interface methods can be private (for helper methods within the interface). Protected methods are still not allowed in interfaces as they wouldn't make sense in the interface context.
+
+57. Q: What happens if we don't provide an implementation of an abstract method in the subclass?
+    A: If a subclass doesn't provide implementation for all abstract methods inherited from its superclass (or interfaces), the subclass must itself be declared abstract. Otherwise, it will result in a compilation error.
+
+58. Q: Can we declare a class both abstract and final?
+    A: No, a class cannot be both abstract and final. These are contradictory concepts:
+    - abstract: must be extended to be used
+    - final: cannot be extended
+    The compiler will give an error if you try to declare a class both abstract and final.
+
+59. Q: What is the difference between an abstract method and a concrete method?
+    A: An abstract method has no implementation (just a signature ending with a semicolon) and must be overridden by subclasses. A concrete method has a complete implementation with a method body in curly braces. Abstract methods can only exist in abstract classes or interfaces.
+
+60. Q: Can we declare local inner classes as abstract?
+    A: Yes, local inner classes can be declared as abstract. However, you would need to create a concrete subclass of that abstract local class within the same method, as local classes have limited scope and can't be extended outside their containing method.
+
+ Advanced OOP Concepts (61-80)
+
+61. Q: What is the SOLID principle in OOP?
+    A: SOLID is an acronym for five design principles:
+    - S: Single Responsibility Principle (a class should have one reason to change)
+    - O: Open/Closed Principle (open for extension, closed for modification)
+    - L: Liskov Substitution Principle (subtypes should be substitutable)
+    - I: Interface Segregation Principle (many specific interfaces better than one general)
+    - D: Dependency Inversion Principle (depend on abstractions, not concretions)
+
+62. Q: What is the difference between association, aggregation and composition?
+    A: All represent "has-a" relationships:
+    - Association: general relationship between objects (e.g., Doctor and Patient)
+    - Aggregation: weak "whole-part" relationship where parts can exist independently (e.g., Department and Professor)
+    - Composition: strong "whole-part" where parts can't exist without whole (e.g., House and Room)
+
+63. Q: What is the factory pattern and when would you use it?
+    A: The factory pattern is a creational pattern that provides an interface for creating objects while allowing subclasses to decide which class to instantiate. Used when:
+    - A class can't anticipate the class of objects it must create
+    - A class wants its subclasses to specify the objects it creates
+    - You want to localize knowledge of object creation
+
+64. Q: What is the builder pattern and its advantages?
+    A: The builder pattern separates object construction from its representation. Advantages:
+    - Allows varying the internal representation of the object
+    - Isolates complex construction code
+    - Provides control over construction process
+    - Makes code more readable (especially for objects with many fields)
+    Example: StringBuilder
+
+65. Q: What is the strategy pattern?
+    A: The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. It lets the algorithm vary independently from clients that use it. Example:
+    ```java
+    interface SortStrategy { void sort(int[] data); }
+    class QuickSort implements SortStrategy { ... }
+    class MergeSort implements SortStrategy { ... }
+    // Client can switch strategies at runtime
+    ```
+
+66. Q: What is the observer pattern?
+    A: The observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified. Example: Java's EventListener mechanism. Components:
+    - Subject (maintains list of observers, notifies them)
+    - Observer (interface for objects that should be notified)
+
+67. Q: What is the decorator pattern?
+    A: The decorator pattern attaches additional responsibilities to an object dynamically. Provides a flexible alternative to subclassing for extending functionality. Example: Java I/O classes like:
+    ```java
+    InputStream is = new BufferedInputStream(new FileInputStream("file.txt"));
+    ```
+
+68. Q: What is the difference between the adapter and facade patterns?
+    A: The adapter pattern converts one interface to another so incompatible interfaces can work together (e.g., converting a third-party interface to one your system expects). The facade pattern provides a simplified interface to a complex subsystem (hiding complexity behind a single interface).
+
+69. Q: What is the template method pattern?
+    A: The template method pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It lets subclasses redefine certain steps without changing the algorithm's structure. Example:
+    ```java
+    abstract class Game {
+        abstract void initialize();
+        abstract void startPlay();
+        // Template method
+        public final void play() {
+            initialize();
+            startPlay();
+        }
+    }
+    ```
+
+70. Q: What is the principle of least knowledge (Law of Demeter)?
+    A: A principle stating that an object should only communicate with:
+    - Itself
+    - Its parameters
+    - Objects it creates
+    - Its direct component objects
+    This reduces dependencies between classes, making systems more maintainable and less fragile.
+
+71. Q: What is the difference between a shallow copy and a deep copy?
+    A: A shallow copy creates a new object but copies all fields (including references) directly, so both original and copy refer to the same objects. A deep copy creates a new object and recursively copies all objects referenced by the original, resulting in a fully independent copy.
+
+72. Q: What is the prototype pattern?
+    A: The prototype pattern creates new objects by copying an existing object (prototype) rather than creating new instances from scratch. Useful when object creation is expensive. In Java, implemented using the Cloneable interface and clone() method.
+
+73. Q: What is the difference between a static nested class and an inner class?
+    A: A static nested class is associated with its outer class but doesn't have access to instance members (can be instantiated without outer class instance). An inner class (non-static) is associated with an instance of the outer class and has access to all its members.
+
+74. Q: What is an anonymous inner class?
+    A: An anonymous inner class is a local inner class without a name, declared and instantiated in a single expression. Used when you need to override methods of a class or interface on the fly. Example:
+    ```java
+    Runnable r = new Runnable() {
+        public void run() {
+            System.out.println("Anonymous runnable");
+        }
+    };
+    ```
+
+75. Q: What is a local inner class?
+    A: A local inner class is a class defined within a method or scope block. It has access to local variables (if they're final or effectively final) and instance variables of the enclosing class. It's only visible within the method where it's defined.
+
+76. Q: What is the visitor pattern and when would you use it?
+    A: The visitor pattern separates algorithms from the objects they operate on by moving them into separate "visitor" classes. Used when:
+    - Many unrelated operations need to be performed on objects
+    - The object structure rarely changes but operations often change
+    - You want to keep related operations together
+    - You need to add operations without changing classes
+
+77. Q: What is the command pattern?
+    A: The command pattern encapsulates a request as an object, allowing parameterization of clients with different requests, queuing of requests, and support for undoable operations. Components:
+    - Command (interface with execute() method)
+    - ConcreteCommand (implements Command)
+    - Invoker (asks command to carry out request)
+    - Receiver (knows how to perform operations)
+
+78. Q: What is the state pattern?
+    A: The state pattern allows an object to alter its behavior when its internal state changes, appearing to change its class. The object (context) delegates state-specific behavior to separate state objects. Useful when an object has many conditional behaviors depending on its state.
+
+79. Q: What is the difference between the bridge and adapter patterns?
+    A: The bridge pattern is designed upfront to separate abstraction from implementation, allowing them to vary independently. The adapter pattern is retrofitted to make existing classes work together despite incompatible interfaces. Bridge is about design, adapter is about making things work after the fact.
+
+80. Q: What is the memento pattern?
+    A: The memento pattern captures and externalizes an object's internal state without violating encapsulation, so the object can be restored to this state later. Used for:
+    - Implementing undo/redo functionality
+    - Saving and restoring object states
+    - Providing transactional behavior
+
+ Java-Specific OOP Features (81-100)
+
+81. Q: What are Java records and how do they relate to OOP?
+    A: Records (Java 16+) are a special kind of class that act as transparent carriers for immutable data. They automatically provide:
+    - private final fields
+    - public constructor (canonical constructor)
+    - Accessor methods
+    - equals(), hashCode(), toString()
+    Example:
+    ```java
+    record Point(int x, int y) {}
+    // Equivalent to writing a verbose immutable class
+    ```
+
+82. Q: What are sealed classes in Java?
+    A: Sealed classes (Java 17+) restrict which other classes or interfaces may extend or implement them. Provides more control over inheritance hierarchy. Syntax:
+    ```java
+    public sealed class Shape permits Circle, Square, Rectangle {
+        // ...
+    }
+    // Only permitted classes can extend Shape
+    ```
+
+83. Q: What is the module system in Java and how does it relate to OOP?
+    A: The Java Platform Module System (JPMS, Java 9+) provides stronger encapsulation at a higher level than classes. Modules:
+    - Group related packages
+    - Explicitly declare dependencies
+    - Control which packages are exposed (exports)
+    - Can hide implementation details even from reflection
+    Complements OOP by providing better large-scale organization.
+
+84. Q: What are pattern matching for instanceof and how does it improve OOP code?
+    A: Pattern matching for instanceof (Java 16+) simplifies common coding patterns:
+    ```java
+    // Old way
+    if (obj instanceof String) {
+        String s = (String) obj;
+        // use s
+    }
+    // New way
+    if (obj instanceof String s) {
+        // use s directly
+    }
+    ```
+    Reduces boilerplate and makes code more readable while maintaining type safety.
+
+85. Q: What are text blocks in Java and how do they relate to OOP?
+    A: Text blocks (Java 15+) are a multi-line string literal that avoids the need for most escape sequences. While not directly related to OOP principles, they improve code readability, especially for classes that work with large string content (e.g., JSON/XML processors, template engines).
+
+86. Q: What are the new methods added to the Object class in recent Java versions?
+    A: Recent additions include:
+    - Objects.requireNonNullElse()/requireNonNullElseGet() (Java 9)
+    - Objects.checkIndex()/checkFromToIndex() (Java 9)
+    - Object.notify()/notifyAll() overloads (Java 9)
+    These utility methods help write more robust OOP code with better null checks and bounds verification.
+
+87. Q: How does the var keyword affect Java OOP?
+    A: The var keyword (Java 10+) allows local variable type inference while maintaining static typing. It doesn't change OOP principles but can make code more concise. Important notes:
+    - Can only be used for local variables
+    - The type is still statically determined
+    - Doesn't work with null or lambda expressions without context
+    - Should be used judiciously to maintain code clarity
+
+88. Q: What are the new interface features in recent Java versions?
+    A: Recent interface enhancements:
+    - Default methods (Java 8)
+    - Static methods (Java 8)
+    - Private methods (Java 9)
+    These allow interfaces to evolve while maintaining backward compatibility and better organizing helper methods.
+
+89. Q: What is the difference between a traditional POJO and a Java record?
+    A: A POJO (Plain Old Java Object) is a regular Java class with getters/setters, possibly with equals/hashCode/toString. A record is a special class form that:
+    - Is immutable by design
+    - Automatically derives equals/hashCode/toString
+    - Has more concise syntax
+    - Is transparent about its data (fields are part of API)
+    Records are ideal for simple data carriers while POJOs offer more flexibility.
+
+90. Q: How do sealed classes help with exhaustive pattern matching?
+    A: Sealed classes enable exhaustive pattern matching because the compiler knows all possible subtypes (through the permits clause). This allows for exhaustive switch expressions without needing a default case when all permitted types are covered:
+    ```java
+    sealed interface Shape permits Circle, Square {}
+    // Compiler knows only Circle and Square are possible
+    double area(Shape s) {
+        return switch (s) {
+            case Circle c -> Math.PI * c.radius() * c.radius();
+            case Square sq -> sq.side() * sq.side();
+            // no default needed
+        };
+    }
+    ```
+
+91. Q: What is the purpose of the @Override annotation?
+    A: The @Override annotation indicates that a method is intended to override a method in a superclass or implement an interface method. Benefits:
+    - Catches errors at compile time if the method doesn't actually override anything
+    - Makes code more readable by explicitly showing intent
+    - Helps maintainers understand the design
+    It's optional but considered good practice.
+
+92. Q: What is the purpose of the @Deprecated annotation?
+    A: The @Deprecated annotation marks a program element (class, method, field) as no longer recommended for use. It informs other developers that:
+    - The element may be removed in future versions
+    - There's a better alternative available
+    - They should migrate their code
+    The compiler generates warnings when deprecated elements are used.
+
+93. Q: What is the purpose of the @SuppressWarnings annotation?
+    A: The @SuppressWarnings annotation tells the compiler to suppress specific warnings for the annotated element. Common uses:
+    - @SuppressWarnings("unchecked") for unchecked generic operations
+    - @SuppressWarnings("deprecation") when using deprecated methods intentionally
+    Should be used sparingly and only when you're certain the warning can be safely ignored.
+
+94. Q: What is the purpose of the @SafeVarargs annotation?
+    A: The @SafeVarargs annotation asserts that a method with a varargs parameter of generic type doesn't perform potentially unsafe operations on its varargs parameter. It suppresses unchecked warnings related to varargs and generic types. Only applicable to final or static methods and constructors.
+
+95. Q: What is the purpose of the @FunctionalInterface annotation?
+    A: The @FunctionalInterface annotation indicates that an interface is intended to be a functional interface (exactly one abstract method). It's optional but helps catch errors at compile time if the interface violates the functional interface requirements. Makes the intent clearer to readers.
+
+96. Q: How does Java handle covariance and contravariance in generics?
+    A: Java supports:
+    - Covariance: `List<? extends Number>` can accept List<Integer> (read-only)
+    - Contravariance: `List<? super Integer>` can accept List<Number> (write-only)
+    This is implemented through wildcards and follows the PECS principle (Producer Extends, Consumer Super).
+
+97. Q: What is the purpose of the try-with-resources statement in OOP?
+    A: The try-with-resources statement (Java 7+) ensures that resources (objects implementing AutoCloseable) are automatically closed at the end of the statement. It simplifies resource management and reduces boilerplate code. Example:
+    ```java
+    try (InputStream is = new FileInputStream("file")) {
+        // use the input stream
+    } // is.close() called automatically
+    ```
+
+98. Q: What is the purpose of the default keyword in interfaces?
+    A: The default keyword in interfaces (Java 8+) allows providing method implementations in interfaces. This enables:
+    - Adding new methods to interfaces without breaking existing implementations
+    - Providing common default behavior
+    - Creating "optional" methods in interfaces
+    Example:
+    ```java
+    interface List<E> {
+        default void sort(Comparator<? super E> c) {
+            Collections.sort(this, c);
+        }
+    }
+    ```
+
+99. Q: What is the purpose of the Optional class in Java?
+    A: The Optional class (Java 8+) is a container object that may or may not contain a non-null value. It's designed to:
+    - Explicitly represent the possibility of absence
+    - Reduce NullPointerExceptions
+    - Encourage more thoughtful handling of missing values
+    Should be used as a return type, not as a field or parameter type.
+
+100. Q: What is the purpose of the var keyword in Java?
+     A: The var keyword (Java 10+) allows local variable type inference, where the compiler infers the type from the initializer. It:
+     - Reduces boilerplate code
+     - Maintains static typing (type is determined at compile time)
+     - Makes code more readable when types are obvious
+     Should be used judiciously - when the type is clear from context.
+
+
+ Java I/O (1-25)
+
+1. Q: What is the difference between byte streams and character streams in Java?
+   A: Byte streams (InputStream/OutputStream) handle raw binary data (8-bit bytes), while character streams (Reader/Writer) handle Unicode characters (16-bit). Character streams automatically handle character encoding/decoding, making them better for text data.
+
+2. Q: What is the decorator pattern in Java I/O?
+   A: Java I/O uses decorator pattern to add functionality dynamically. For example:
+   ```java
+   InputStream is = new BufferedInputStream(new FileInputStream("file.txt"));
+   ```
+   Here BufferedInputStream decorates FileInputStream to add buffering.
+
+3. Q: What is the purpose of the File class?
+   A: The File class represents file/directory pathnames and provides operations like:
+   - Checking existence (exists())
+   - Creating/deleting files (createNewFile(), delete())
+   - Getting metadata (length(), lastModified())
+   - Listing directory contents (listFiles())
+
+4. Q: What is the difference between FileReader and FileInputStream?
+   A: FileReader is a character stream for reading text files (handles character encoding), while FileInputStream is a byte stream for reading raw bytes. Use FileReader for text, FileInputStream for binary data.
+
+5. Q: What is serialization and how is it implemented in Java?
+   A: Serialization is converting objects to byte streams for storage/transmission. Implemented by:
+   - Implementing Serializable interface (marker interface)
+   - Using ObjectOutputStream.writeObject() and ObjectInputStream.readObject()
+   - Can customize with transient (exclude fields) and writeObject()/readObject()
+
+6. Q: What is the transient keyword?
+   A: The transient keyword marks fields that shouldn't be serialized. Useful for:
+   - Sensitive data (like passwords)
+   - Derived/calculated fields
+   - Non-serializable objects
+
+7. Q: What is Externalizable interface?
+   A: Externalizable extends Serializable and provides writeExternal() and readExternal() methods for complete control over serialization process (vs Java's default serialization).
+
+8. Q: What is the difference between PrintStream and PrintWriter?
+   A: Both provide print()/println() methods but:
+   - PrintStream is byte-oriented (System.out is PrintStream)
+   - PrintWriter is character-oriented
+   - PrintWriter handles character encoding properly
+
+9. Q: What is the purpose of the try-with-resources statement?
+   A: It automatically closes resources (AutoCloseable objects) at the end of the statement:
+   ```java
+   try (InputStream is = new FileInputStream("file")) {
+       // use stream
+   } // is.close() called automatically
+   ```
+
+10. Q: What is the difference between BufferedReader and Scanner?
+    A: Both read text but:
+    - BufferedReader is simpler/faster for line-by-line reading
+    - Scanner can parse primitive types and use regular expressions
+    - Scanner is more flexible but has smaller buffer
+
+11. Q: What are NIO classes in Java?
+    A: New I/O (NIO) provides high-performance, non-blocking I/O operations through:
+    - Buffers (ByteBuffer, CharBuffer)
+    - Channels (FileChannel, SocketChannel)
+    - Selectors for multiplexed non-blocking I/O
+    - Files utility class
+
+12. Q: What is memory-mapped I/O?
+    A: Memory-mapped I/O (via FileChannel.map()) maps a file region directly into memory, allowing very fast file access by treating file content as memory array.
+
+13. Q: What is the difference between Path and File classes?
+    A: Path (NIO) is the modern replacement for File (legacy):
+    - Path supports symbolic links
+    - Better handling of filesystem operations
+    - More flexible with Files utility class
+    - Designed for NIO operations
+
+14. Q: What is the purpose of the Files utility class?
+    A: Files (java.nio.file) provides static methods for common file operations:
+    - copy(), move(), delete()
+    - readAllBytes(), readAllLines()
+    - createFile(), createDirectory()
+    - isHidden(), isReadable()
+
+15. Q: What is the difference between InputStream.read() and Reader.read()?
+    A: InputStream.read() returns next byte (0-255) or -1, while Reader.read() returns next character (0-65535) or -1. Reader handles character encoding.
+
+16. Q: How do you read/write objects to a file in Java?
+    A: Using ObjectOutputStream and ObjectInputStream:
+    ```java
+    // Writing
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("file"))) {
+        oos.writeObject(myObject);
+    }
+    
+    // Reading
+    try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("file"))) {
+        MyClass obj = (MyClass) ois.readObject();
+    }
+    ```
+
+17. Q: What is the purpose of the RandomAccessFile class?
+    A: RandomAccessFile allows reading/writing at any position in a file (random access), supporting both read and write operations with file pointer manipulation.
+
+18. Q: What is the difference between flush() and close()?
+    A: flush() writes any buffered output to the underlying stream but keeps the stream open. close() flushes and releases system resources, making the stream unusable.
+
+19. Q: What are the standard streams in Java?
+    A: System.in (InputStream), System.out (PrintStream), and System.err (PrintStream) representing standard input, output, and error streams respectively.
+
+20. Q: How do you read a file line by line in Java?
+    A: Several ways:
+    ```java
+    // Java 8+ with Files
+    Files.lines(Paths.get("file")).forEach(System.out::println);
+    
+    // With BufferedReader
+    try (BufferedReader br = new BufferedReader(new FileReader("file"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+    }
+    ```
+
+21. Q: What is the purpose of the java.nio.channels package?
+    A: It provides channels which represent connections to entities capable of performing I/O operations (files, sockets), supporting features like:
+    - Non-blocking I/O
+    - Memory-mapped files
+    - File locking
+    - Scatter/gather operations
+
+22. Q: What is a Selector in NIO?
+    A: A Selector allows a single thread to monitor multiple channels for I/O readiness, enabling efficient handling of many connections with few threads (key for scalable servers).
+
+23. Q: What is the difference between FileChannel and FileInputStream?
+    A: FileChannel (NIO) provides more advanced features than FileInputStream:
+    - Memory-mapped I/O
+    - File locking
+    - Position-based reads/writes
+    - Can work with Selector for non-blocking I/O
+
+24. Q: What is the purpose of the Charset class?
+    A: Charset represents a character encoding (UTF-8, ISO-8859-1 etc.) and provides methods for encoding/decoding between bytes and characters.
+
+25. Q: How do you handle different character encodings in Java I/O?
+    A: By specifying charset when creating Readers/Writers:
+    ```java
+    Reader reader = new InputStreamReader(new FileInputStream("file"), StandardCharsets.UTF_8);
+    Writer writer = new OutputStreamWriter(new FileOutputStream("file"), "ISO-8859-1");
+    ```
+
+ Exception Handling (26-50)
+
+26. Q: What is the difference between checked and unchecked exceptions?
+    A: Checked exceptions must be declared or handled (IOException, SQLException). Unchecked exceptions (RuntimeException and its subclasses like NullPointerException) don't require declaration.
+
+27. Q: What is the exception hierarchy in Java?
+    A: Throwable (superclass)
+    - Error (serious unrecoverable problems like OutOfMemoryError)
+    - Exception
+      - RuntimeException (unchecked)
+      - Other exceptions (checked)
+
+28. Q: What is the difference between throw and throws?
+    A: throw is used to explicitly throw an exception. throws declares which exceptions a method might throw (for checked exceptions).
+
+29. Q: What is try-with-resources and how does it help with exceptions?
+    A: It automatically closes resources (AutoCloseable) even if an exception occurs, preventing resource leaks. Resources are closed in reverse order of declaration.
+
+30. Q: What is the purpose of the finally block?
+    A: The finally block always executes (unless JVM exits), typically used for cleanup code that must run whether an exception occurs or not.
+
+31. Q: Can you have a try block without catch or finally?
+    A: No, a try block must be followed by either catch, finally, or both. With try-with-resources, you can have try without catch if resources are declared.
+
+32. Q: What is exception chaining?
+    A: Wrapping a caught exception in another exception to provide more context, preserving the original exception via constructor or initCause():
+    ```java
+    throw new MyException("Context", originalException);
+    ```
+
+33. Q: What is the difference between final, finally, and finalize()?
+    A: final is a modifier (for classes, methods, variables). finally is a block for cleanup. finalize() is a method called by garbage collector before object destruction (deprecated in Java 9).
+
+34. Q: Can you override a method that throws an exception?
+    A: Yes, but with restrictions:
+    - Can throw same or subclass exception
+    - Can throw fewer exceptions
+    - Can't throw new or broader checked exceptions
+
+35. Q: What is a try-with-resources statement?
+    A: A try statement that declares resources (AutoCloseable) that will be automatically closed:
+    ```java
+    try (Resource r = new Resource()) {
+        // use resource
+    } // r.close() called automatically
+    ```
+
+36. Q: What happens if both catch and finally blocks throw exceptions?
+    A: The exception from finally block is thrown, and the original exception is suppressed (available via getSuppressed()).
+
+37. Q: What is a suppressed exception?
+    A: When multiple exceptions occur (e.g., in try-with-resources), one exception is primary and others are suppressed (accessible via getSuppressed()).
+
+38. Q: Can you catch multiple exceptions in a single catch block?
+    A: Yes, since Java 7:
+    ```java
+    catch (IOException | SQLException e) {
+        // handle both
+    }
+    ```
+
+39. Q: What is the purpose of the AutoCloseable interface?
+    A: It marks resources that can be managed by try-with-resources, requiring a close() method to release resources.
+
+40. Q: What is the difference between Error and Exception?
+    A: Errors are serious problems (OutOfMemoryError) that applications shouldn't try to catch. Exceptions are conditions that applications might want to catch/handle.
+
+41. Q: Can you rethrow an exception in Java?
+    A: Yes, either by:
+    - Simply throwing the caught exception: `throw e;`
+    - Wrapping it in a new exception
+    - In Java 7+, you can rethrow with more precise type checking
+
+42. Q: What is the purpose of the @throws Javadoc tag?
+    A: It documents that a method may throw a particular exception, including the conditions under which it might be thrown.
+
+43. Q: What is a stack trace and how do you access it?
+    A: A stack trace shows the call hierarchy when an exception occurred. Access via:
+    ```java
+    e.printStackTrace(); // prints to stderr
+    String stackTrace = Arrays.toString(e.getStackTrace());
+    ```
+
+44. Q: What is the difference between IllegalArgumentException and NullPointerException?
+    A: IllegalArgumentException indicates a method argument is invalid. NullPointerException indicates an unexpected null value was encountered (subclass of RuntimeException).
+
+45. Q: How do you create a custom exception?
+    A: By extending Exception (checked) or RuntimeException (unchecked):
+    ```java
+    public class MyException extends Exception {
+        public MyException(String message) {
+            super(message);
+        }
+    }
+    ```
+
+46. Q: What is the purpose of the Throwable.getCause() method?
+    A: It returns the underlying cause of an exception (when one exception is caused by another), useful for exception chaining.
+
+47. Q: What is the try-finally construct used for?
+    A: When you need to ensure cleanup happens but don't need to catch exceptions (or will rethrow them):
+    ```java
+    Resource r = null;
+    try {
+        r = new Resource();
+        // use resource
+    } finally {
+        if (r != null) r.close();
+    }
+    ```
+
+48. Q: What is the difference between ClassNotFoundException and NoClassDefFoundError?
+    A: ClassNotFoundException occurs when trying to load a class dynamically (Class.forName()) but class isn't found. NoClassDefFoundError occurs when a class was present at compile time but not at runtime.
+
+49. Q: What is the purpose of the Thread.UncaughtExceptionHandler?
+    A: It handles exceptions that escape from a thread's run() method, allowing centralized handling of uncaught exceptions.
+
+50. Q: What is the suppressed exceptions mechanism in try-with-resources?
+    A: If exceptions occur both in the try block and during resource closing, the try block exception is primary and closing exceptions are added to its suppressed list (accessible via getSuppressed()).
+
+ Multithreading (51-80)
+
+51. Q: What are the ways to create a thread in Java?
+    A: Two main ways:
+    1. Extend Thread class and override run()
+    2. Implement Runnable and pass to Thread constructor
+    (Preferred way is implementing Runnable)
+
+52. Q: What is the difference between Runnable and Callable?
+    A: Runnable's run() returns void and can't throw checked exceptions. Callable's call() returns a value and can throw exceptions. Callables are used with ExecutorService.
+
+53. Q: What is the Executor framework?
+    A: A higher-level replacement for working directly with threads, providing:
+    - Thread pool management
+    - Future for result retrieval
+    - Scheduled execution
+    Via interfaces like Executor, ExecutorService, ScheduledExecutorService
+
+54. Q: What is the volatile keyword?
+    A: volatile ensures variable visibility across threads (reads/writes go directly to main memory) and prevents instruction reordering, but doesn't provide atomicity for compound operations.
+
+55. Q: What is the synchronized keyword?
+    A: synchronized provides mutually exclusive access to code blocks/methods, ensuring:
+    - Only one thread can execute synchronized code at a time
+    - Guarantees visibility of changes to all threads
+    - Enforces happens-before relationship
+
+56. Q: What is the difference between wait() and sleep()?
+    A: wait() is an Object method that releases the lock and waits for notify(). sleep() is a Thread method that pauses execution without releasing locks.
+
+57. Q: What is a deadlock and how can it occur?
+    A: Deadlock occurs when two or more threads wait forever for locks held by each other. Four conditions must hold:
+    1. Mutual exclusion
+    2. Hold and wait
+    3. No preemption
+    4. Circular wait
+
+58. Q: What is the producer-consumer problem?
+    A: A synchronization problem where:
+    - Producer produces data to a shared buffer
+    - Consumer consumes from the buffer
+    - Must coordinate to avoid:
+      * Consumer consuming empty buffer
+      * Producer overflowing buffer
+
+59. Q: What are atomic variables in Java?
+    A: Classes in java.util.concurrent.atomic (AtomicInteger etc.) that provide:
+    - Lock-free thread-safe operations
+    - Atomic compare-and-swap (CAS) operations
+    - Better performance than synchronization for simple operations
+
+60. Q: What is the Fork/Join framework?
+    A: A framework (since Java 7) for parallelizing divide-and-conquer algorithms using:
+    - ForkJoinPool (special ExecutorService)
+    - RecursiveTask (returns result)
+    - RecursiveAction (no result)
+    Implements work-stealing algorithm for efficiency
+
+61. Q: What is the difference between CyclicBarrier and CountDownLatch?
+    A: Both synchronize threads but:
+    - CountDownLatch is one-time use, threads wait for count to reach zero
+    - CyclicBarrier can be reused, threads wait for each other at barrier
+    - CountDownLatch count is decremented, CyclicBarrier count is incremented
+
+62. Q: What is the happens-before relationship?
+    A: A guarantee that memory writes by one statement are visible to another statement when:
+    - Same thread execution order
+    - Synchronization actions (lock release/acquire)
+    - volatile variable access
+    - Thread start/join operations
+
+63. Q: What is thread starvation?
+    A: When a thread cannot gain regular access to shared resources and is unable to make progress, often because lower-priority threads are preempted by higher-priority threads.
+
+64. Q: What is the Java Memory Model?
+    A: Formal specification of how threads interact through memory, defining:
+    - How/when changes by one thread are visible to others
+    - Rules for instruction reordering
+    - Behavior of synchronized, volatile, final
+
+65. Q: What is a race condition?
+    A: When the program's behavior depends on the relative timing of events (thread scheduling), often leading to unpredictable results when multiple threads access shared data without proper synchronization.
+
+66. Q: What is the difference between interrupt() and interrupted()?
+    A: interrupt() sets a thread's interrupt flag. interrupted() checks and clears the flag. isInterrupted() checks without clearing.
+
+67. Q: What is a thread pool and why use one?
+    A: A collection of pre-initialized threads that execute tasks, providing:
+    - Reduced thread creation overhead
+    - Controlled resource usage
+    - Better system stability
+    Implemented via ExecutorService implementations
+
+68. Q: What is the difference between Executor and ExecutorService?
+    A: Executor is a simple interface with execute(Runnable). ExecutorService extends Executor adding:
+    - Task submission with Futures (submit())
+    - Shutdown management
+    - Batch invocation (invokeAll())
+
+69. Q: What is CompletableFuture?
+    A: (Java 8+) A Future that can be explicitly completed and supports chaining of async operations, callbacks, and combination of multiple futures.
+
+70. Q: What is the difference between ConcurrentHashMap and Hashtable?
+    A: Both are thread-safe but:
+    - Hashtable locks entire table for each operation
+    - ConcurrentHashMap uses finer-grained locking (or CAS for reads)
+    - ConcurrentHashMap has better performance and scalability
+
+71. Q: What is the purpose of ThreadLocal?
+    A: ThreadLocal provides thread-local variables - each thread has its own independently initialized copy, useful for:
+    - Per-thread context (e.g., user sessions)
+    - Avoiding synchronization
+    - Storing non-thread-safe objects (SimpleDateFormat)
+
+72. Q: What are phantom references?
+    A: The weakest reference type (PhantomReference), used to schedule post-mortem cleanup actions since they're enqueued only when the object is physically removed from memory.
+
+73. Q: What is the double-checked locking pattern?
+    A: A (broken without volatile) optimization for lazy initialization:
+    ```java
+    private volatile Singleton instance;
+    public Singleton getInstance() {
+        if (instance == null) {
+            synchronized (this) {
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+    ```
+
+74. Q: What is the purpose of the Lock interface?
+    A: Provides more flexible locking operations than synchronized, including:
+    - tryLock() (attempt without waiting)
+    - lockInterruptibly()
+    - Multiple Condition objects per lock
+    Implemented by ReentrantLock
+
+75. Q: What is the difference between fair and non-fair locks?
+    A: Fair locks grant access in the order threads requested it, preventing starvation but with lower throughput. Non-fair locks allow barging but may starve threads.
+
+76. Q: What is a semaphore?
+    A: A synchronization primitive that maintains a set of permits, useful for:
+    - Controlling access to a resource pool
+    - Implementing bounded collections
+    - Throttling
+
+77. Q: What is a CountDownLatch?
+    A: A synchronization aid that allows threads to wait until a set of operations completes (count reaches zero), initialized with a count that is decremented by threads.
+
+78. Q: What is the difference between Future and CompletableFuture?
+    A: Future represents a pending result with basic operations. CompletableFuture (Java 8+) extends this with:
+    - Explicit completion
+    - Async call chaining
+    - Exception handling
+    - Combining multiple futures
+
+79. Q: What is the purpose of the StampedLock?
+    A: (Java 8+) An advanced lock supporting three modes:
+    - Writing (exclusive, like ReentrantLock)
+    - Reading (non-exclusive)
+    - Optimistic reading (no blocking, validates if read was consistent)
+
+80. Q: What is the parallel stream in Java?
+    A: A stream that can process elements concurrently using the ForkJoinPool:
+    ```java
+    list.parallelStream().forEach(...);
+    ```
+    Useful for CPU-bound operations on large datasets, but requires careful handling of shared state.
+
+ Regular Expressions (81-100)
+
+81. Q: What package contains Java's regex classes?
+    A: java.util.regex, containing:
+    - Pattern (compiled regex)
+    - Matcher (engine that performs match operations)
+    - PatternSyntaxException (checked exception for invalid patterns)
+
+82. Q: What is the difference between matches() and find()?
+    A: matches() tries to match the entire input against the pattern. find() searches for the next subsequence that matches the pattern.
+
+83. Q: How do you compile a regex pattern in Java?
+    A: Using Pattern.compile():
+    ```java
+    Pattern pattern = Pattern.compile("regex");
+    Matcher matcher = pattern.matcher(input);
+    ```
+
+84. Q: What are the common character classes in Java regex?
+    A:
+    - \d - digit [0-9]
+    - \D - non-digit [^0-9]
+    - \w - word character [a-zA-Z0-9_]
+    - \W - non-word character
+    - \s - whitespace [ \t\n\x0B\f\r]
+    - \S - non-whitespace
+
+85. Q: What are quantifiers in regex?
+    A: Symbols that specify how many instances of a character/group must occur:
+    - * - zero or more
+    - + - one or more
+    - ? - zero or one
+    - {n} - exactly n
+    - {n,} - n or more
+    - {n,m} - between n and m
+
+86. Q: What is the difference between greedy, reluctant, and possessive quantifiers?
+    A:
+    - Greedy (*, +, ?) - matches as much as possible
+    - Reluctant (*?, +?, ??) - matches as little as possible
+    - Possessive (*+, ++, ?+) - matches as much as possible without backtracking
+
+87. Q: What are capturing groups in regex?
+    A: Parenthesized subpatterns that capture matched text for later reference:
+    - Referenced via \1, \2 etc. in pattern
+    - Accessed via matcher.group(int) after match
+    Example: "(\\d{3})-(\\d{3})" captures area code and exchange
+
+88. Q: What are non-capturing groups?
+    A: Groups (?:pattern) that match but don't capture, useful for applying quantifiers without capturing overhead.
+
+89. Q: What are lookahead and lookbehind assertions?
+    A: Zero-width assertions that match a pattern only if followed/preceded by another pattern:
+    - Positive lookahead: X(?=Y) (X if followed by Y)
+    - Negative lookahead: X(?!Y) (X if not followed by Y)
+    - Positive lookbehind: (?<=Y)X
+    - Negative lookbehind: (?<!Y)X
+
+90. Q: How do you split a string using regex?
+    A: Using String.split() or Pattern.split():
+    ```java
+    String[] parts = "a,b,c".split(",");
+    // or
+    Pattern pattern = Pattern.compile("\\s*,\\s*");
+    String[] parts = pattern.split("a, b , c");
+    ```
+
+91. Q: How do you replace text using regex?
+    A: Using String.replaceAll() or Matcher.replaceAll():
+    ```java
+    String result = "foo123bar".replaceAll("\\d+", "-");
+    // or
+    Pattern pattern = Pattern.compile("\\d+");
+    Matcher matcher = pattern.matcher("foo123bar");
+    String result = matcher.replaceAll("-");
+    ```
+
+92. Q: What is the difference between replaceAll() and replaceFirst()?
+    A: replaceAll() replaces all occurrences, replaceFirst() replaces only the first occurrence.
+
+93. Q: How do you match Unicode characters in regex?
+    A: Using \uXXXX (specific code point) or \p{property} (property-based):
+    - \p{L} - any letter
+    - \p{Sc} - currency symbols
+    - \p{InGreek} - Greek block
+
+94. Q: What are boundary matchers in regex?
+    A: Special constructs for matching positions:
+    - ^ - start of line
+    - $ - end of line
+    - \b - word boundary
+    - \B - non-word boundary
+    - \A - start of input
+    - \z - end of input
+
+95. Q: How do you make a regex case-insensitive?
+    A: Either:
+    - Use (?i) flag in pattern: "(?i)pattern"
+    - Use Pattern.CASE_INSENSITIVE flag when compiling:
+      ```java
+      Pattern.compile("pattern", Pattern.CASE_INSENSITIVE);
+      ```
+
+96. Q: What is the difference between Pattern.matches() and Matcher.matches()?
+    A: Pattern.matches() is a convenience method that compiles a pattern and matches entire input. Matcher.matches() does the same but on an existing Matcher instance.
+
+97. Q: How do you extract multiple matches from a string?
+    A: Using Matcher.find() in a loop:
+    ```java
+    Pattern pattern = Pattern.compile("\\d+");
+    Matcher matcher = pattern.matcher("a1b23c456");
+    while (matcher.find()) {
+        System.out.println(matcher.group());
+    }
+    ```
+
+98. Q: What is the dotall mode in regex?
+    A: A mode (Pattern.DOTALL or (?s)) where . matches any character including line terminators, which it normally doesn't match.
+
+99. Q: How do you handle special characters in regex?
+    A: Escape them with backslash \:
+    - \. - literal dot
+    - \\ - literal backslash
+    - \[ - literal [
+    Inside character classes, some characters lose special meaning while others gain it.
+
+100. Q: What is the multiline mode in regex?
+     A: A mode (Pattern.MULTILINE or (?m)) where ^ and $ match at the start/end of each line (instead of just start/end of entire input).

@@ -1,0 +1,13 @@
+NB: Each time when given a java project written using maven or Gradle tools, do check first the POM file (Project Object Model) and understand which each dependency or plugin is giving🤔🤔
+and then the folder structure to get abstract over view.
+
+1. What is maven?
+2. How do maven work?
+3. Which Nodejs file do pom.xml file resembling?
+4. JPA vs Hibernate?
+5. Where do we put JPA configuration file put in a java EE application? 
+6. What are two classes very key for database management using JPA?
+7. What is spring boot?
+8. Which file contains spring boot configurations? 
+9. Compare spring boot and servlets?
+10. Give at least 10 popular spring boot annotations for handling requests and responses?

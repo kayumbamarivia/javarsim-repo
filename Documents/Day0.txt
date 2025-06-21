@@ -1,0 +1,20 @@
+PROJECT STRUCTURE IN SPRING BOOT PROJECT
+
+=>Inside java package in spring boot project the main components are the following:
+
+-Main class : It is an entry point that runs the application(Driver 🚘).
+-Models : Package for holding all database classes or classes that are mapped to database with JPA or other data holders (Store point 🏬). It can act also as DAO (Data Access Objects).
+-Repository : Packages which has classes that implements JPA REPOSITORY interface for database operations(Key 🗝).
+-Services : Package for holding all classes with business logic or with methods for communication with database (🔫).
+-DTOS : Package for holding Data Transfer Objects classes which helps in receiving requests and sending responses(🍴).
+-Controller : Package for holding the controlling classes which dictate where to find things or which service is responsible for giving the response according to the request(🤔)
+-Config : Package for holding configuration classes(⚠️)
+-Filter : Package for holding classes responsible for filtering or intercepting requests before they reach to our servers(🚨)
+-Exceptions : Package for holding custom classes for handling unexpected things but not errors(⁉️)
+-Utils : Package for holding custom utility classes such as validators(💁‍♂️)
+
+=>Inside resources package there property files for application specific files 
+
+=>Other important files are POM for project management and metadata, docker file for deployment and target package for holding jar or war files or other output classes.
+
+NB: Unlike spring, spring boot is all about dealing with different annotations rather than XML files(Configuration) and also knowing different classes or objects provides by different dependencies(Apis).
